@@ -1,0 +1,526 @@
+/*
+ * Login: xzheva00
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "PT Sans";
+}
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+a:active {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 24px;
+}
+
+#header {
+  width: 100vw;
+  height: 100vh;
+  min-height: 400px;
+  display: block;
+  background: url(../img/header.jpg) 55%;
+  /* background-size: cover; */
+  background-color: #0d0d0d;
+  background-repeat: no-repeat;
+}
+.content {
+  width: 1200px;
+  margin: auto;
+}
+
+#header-menu {
+  display: flex;
+  flex-flow: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#header-menu a {
+  color: steelblue;
+  letter-spacing: 0.05em;
+}
+#header-menu a:hover {
+  color: white;
+}
+#logo {
+  margin-top: 15px;
+  width: 30vw;
+  color: steelblue;
+  font-size: 25px;
+  font-family: "Special Elite";
+}
+.fas {
+  margin: 5px;
+  margin-left: 10px;
+}
+#contacts {
+  margin: 10px;
+  padding: 10px;
+  width: 30vw;
+  text-align: right;
+  color: steelblue;
+}
+#navigation {
+  margin: 10px;
+  width: 40vw;
+  order: 3;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+}
+#navigation li {
+  margin-left: -5px;
+  padding: 5px 15px;
+  display: inline-block;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-out;
+}
+#navigation a {
+  color: white;
+}
+#navigation li:hover {
+  border: 1px solid white;
+}
+#networks {
+  margin: 10px;
+  margin-right: 25px;
+  color: steelblue;
+  width: auto;
+  order: 4;
+  text-align: right;
+}
+.fab {
+  width: 25px;
+  margin: 5px;
+  transform: scale(1.5);
+}
+
+#header-title {
+  margin: 20px;
+  position: relative;
+  top: 30vh;
+  color: white;
+}
+#header-title h1 {
+  font-size: 64px;
+}
+#get-started {
+  width: 140px;
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px solid white;
+  opacity: 0.5;
+  border-radius: 15px;
+  transition: all 0.5s ease-out;
+}
+#get-started:hover {
+  opacity: 1;
+  border: 2px solid steelblue;
+  background-color: steelblue;
+}
+
+#services {
+  text-align: center;
+}
+#services h2 {
+  margin: 80px 0 60px;
+}
+#services p {
+  color: #898989;
+}
+#services .content > div {
+  margin: 50px auto;
+  width: 640px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services-column {
+  width: 300px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 3px #bfbfbf;
+}
+.services-column:hover {
+  box-shadow: 0px 0px 5px 1px steelblue;
+  color: steelblue;
+}
+.services-card img {
+  margin: 25px 0 25px;
+  width: 50px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  position: relative;
+  left: 20px;
+}
+.services-card img:nth-child(2n) {
+  position: relative;
+  left: -34px;
+  background-color: steelblue;
+  opacity: 0;
+}
+.services-card:hover img:nth-child(2n) {
+  opacity: 1;
+}
+.services-card p {
+  margin: 20px 0 20px;
+}
+
+#about {
+  background-color: #f7f7f7;
+}
+.about-item {
+  padding: 80px 0 80px;
+}
+.about-item img {
+  float: left;
+  margin-right: 80px;
+  margin-bottom: 40px;
+  width: 40%;
+  border-radius: 5px;
+  transition: all 0.5s ease-out;
+}
+.about-item img:hover {
+  width: 50%;
+}
+.about-item:nth-child(2n) img {
+  float: right;
+  margin-right: 0px;
+  margin-left: 80px;
+}
+.about-item p {
+  margin-top: 30px;
+  text-align: justify;
+  color: #4d4d4d;
+}
+
+#team {
+  text-align: center;
+  padding-bottom: 100px;
+}
+#team h2 {
+  margin: 50px;
+}
+.team-card {
+  display: inline-block;
+  margin: 10px;
+  width: 22%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 3px #bfbfbf;
+}
+.team-card:hover {
+  box-shadow: 0px 0px 8px 3px steelblue;
+}
+.team-card img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.team-card h3 {
+  margin: 40px 0 10px;
+}
+.team-card:hover h3 {
+  color: steelblue;
+}
+.team-card h4 {
+  color: #898989;
+}
+.team-card p {
+  margin: 5px 0 10px;
+  color: #bfbfbf;
+}
+
+#stats {
+  padding: 80px 0 80px;
+  border-top: 1px dashed #898989;
+  text-align: center;
+}
+#stats .content {
+  display: flex;
+  justify-content: space-around;
+}
+.stats-card {
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  width: 300px;
+  background-color: #4d4d4d;
+  color: white;
+}
+.stats-card:hover {
+  background-color: steelblue;
+}
+.fa-solid {
+  position: relative;
+  top: -25px;
+  font-size: 32px;
+  color: steelblue;
+  z-index: 2;
+  border: 10px solid white;
+  background-color: #fff;
+  border-radius: 50px;
+}
+.stats-card p {
+  margin: 10px 0 10px;
+  color: #898989;
+}
+
+#price {
+  padding: 80px 0 80px;
+  background-color: #f7f7f7;
+}
+#price h2 {
+  text-align: center;
+}
+table {
+  margin: 20px;
+  margin-top: 60px;
+  width: 80%;
+  border-spacing: 0px 20px;
+  /* border-collapse: collapse; */
+  color: #898989;
+  text-align: left;
+}
+th {
+  font-weight: bold;
+  color: black;
+  padding-bottom: 20px;
+}
+tr:hover {
+  background-color: #fff;
+  color: steelblue;
+}
+td {
+  padding: 20px 0;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+}
+#price ul {
+  margin-left: 20px;
+}
+#price li:nth-child(1) {
+  font-weight: bold;
+  list-style-type: none;
+  margin-left: -20px;
+}
+#price button {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid steelblue;
+}
+#price button:hover {
+  background-color: steelblue;
+  color: white;
+}
+
+#refs {
+  padding: 80px;
+  text-align: center;
+}
+#refs .content {
+  display: flex;
+  justify-content: space-around;
+}
+.refs-card {
+  width: 30%;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.refs-card:hover blockquote {
+  background-color: steelblue;
+}
+.refs-card:hover h3 {
+  color: steelblue;
+}
+.refs-card blockquote {
+  float: left;
+  width: 100%;
+  padding: 20px 50px 20px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: #4d4d4d;
+  color: white;
+  position: relative;
+}
+.refs-card blockquote::before {
+  content: '"';
+  font-style: italic;
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 25px;
+  transform: scale(6);
+  color: steelblue;
+}
+.refs-card:hover blockquote::before {
+  color: white;
+}
+.refs-card blockquote::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 100%;
+  border: 10px solid transparent;
+  border-left: 10px solid #4d4d4d;
+  border-top: 10px solid #4d4d4d;
+}
+.refs-card:hover blockquote::after {
+  border: 10px solid transparent;
+  border-left: 10px solid steelblue;
+  border-top: 10px solid steelblue;
+}
+.refs-card figure {
+  margin-top: 30px;
+}
+.refs-card img {
+  width: 60px;
+  margin-left: 10px;
+
+  border-radius: 50px;
+  display: inline-block;
+}
+.refs-card h3 {
+  float: right;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 25px;
+  line-height: 55px;
+  color: #898989;
+}
+
+#contact {
+  border-top: 1px dashed #898989;
+  padding: 80px 0 80px;
+}
+#contact h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#map {
+  width: 50%;
+  height: 400px;
+  display: inline-block;
+}
+form {
+  margin-top: 30px;
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 580px;
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid steelblue;
+}
+input:invalid {
+  color: red;
+}
+input:focus,
+input:hover {
+  outline: 0;
+  border: 1px solid green;
+}
+#contact-name {
+  width: 48%;
+}
+#contact-email {
+  width: 48%;
+}
+#contact-subject {
+  width: 100%;
+}
+#contact-message {
+  padding: 10px;
+  width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid steelblue;
+}
+#contact-message:hover,
+#contact-message:focus {
+  outline: 0;
+  border-color: green;
+}
+#contact-submit {
+  margin: auto;
+  width: 60%;
+  background-color: steelblue;
+  color: white;
+}
+#contact-submit:hover {
+  background-color: green;
+}
+
+#footer {
+  background-color: #000;
+  padding: 40px;
+  color: #898989;
+}
+#footer span:nth-child(2) {
+  float: right;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    width: auto;
+    margin: 0 20px 0;
+  }
+  #logo {
+    width: 35vw;
+  }
+  #contacts {
+    width: 40vw;
+  }
+  #navigation {
+    width: 50vw;
+  }
+  table {
+    width: 96%;
+  }
+  form {
+    width: 46vw;
+  }
+}
+@media (max-width: 860px) {
+  #contacts {
+    width: 60vw;
+  }
+  #navigation {
+    width: 60vw;
+  }
+}
